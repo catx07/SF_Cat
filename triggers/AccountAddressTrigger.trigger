@@ -1,7 +1,7 @@
 trigger AccountAddressTrigger on Account (before insert, before update) {
-    // Account Update || Insert 시
+    // Account 업설트시
     // Match_Billing_Address__c 체크박스 값에 따라 
-    // ShippingPostalCode = BillingPostalCode
+    // ShippingPostalCode 값을 BillingPostalCode 와 동일하게 만듬
 
     if (Trigger.isBefore && (Trigger.isInsert || Trigger.isUpdate))
     {

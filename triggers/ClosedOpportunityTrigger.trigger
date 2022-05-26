@@ -1,10 +1,10 @@
-trigger ClosedOppCreateTask on Opportunity (after insert, after update) {
+trigger ClosedOpportunityTrigger on Opportunity (after insert, after update) {
     // Stage 가 Closed Won 되면 기회와 연결된 Task 생성 
     
     if(Trigger.isAfter && (Trigger.isInsert || Trigger.isUpdate)) // AFTER - INSERT UPDATE
     {
         List<Opportunity> opps = [SELECT Id, StageName FROM Opportunity WHERE StageName = 'Closed Won' AND Id IN :Trigger.New];
-        List<Task> tasks = new List<Task>(); //업설트할 테스크 리스트
+        List<Task> tasks = new List<Task>(); //upsert 할 task 리스트
         
         for (Opportunity opp : opps )
         {
