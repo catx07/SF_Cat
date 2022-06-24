@@ -12,8 +12,7 @@
   - [Contact Record 추가시 환영메일 전송!](force-app/main/default/triggers/HelloEmail.trigger)
   - [Trigger 캡쳐 (debug)](force-app/main/default/triggers/CaseTrigger.trigger)
 
-- Link
-  - [Bitbukket](https://bitbucket.org/kittengit/sf_cat/src)
+- [Link](https://bitbucket.org/kittengit/sf_cat/src)
 
 
 
